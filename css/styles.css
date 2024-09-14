@@ -20,7 +20,7 @@
     width: 300px; 
     height: auto;
     background: #ffff;
-    border-radius: 2px;
+    border-radius: 10px; 
     overflow: hidden; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -58,4 +58,5 @@
 
 .conclusion p {
     margin: 20px 30px;
+    font-size: 14px; 
 }
