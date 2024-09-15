@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px; 
-    background: rgb(148, 120, 204);
+    background: rgb(120, 140, 204);
     font-family: 'Nunito Sans', 'Sans-serif';
     padding: 20px;
 }
@@ -40,12 +40,12 @@
     height: 100px; 
     border-radius: 50%;
     object-fit: cover; 
-    box-shadow: 0 0 0 8px hsla(274, 92%, 80%, 0.407);
+    box-shadow: 0 0 0 8px hsla(224, 92%, 80%, 0.407);
     margin: 20px auto; 
 }
 
 .header h2 {
-    color: rgb(51, 0, 90);
+    color: rgb(0, 21, 90);
 }
 
 .header h4 {
@@ -53,7 +53,7 @@
 }
 
 .conclusion {
-    background-color: #a983ea91;
+    background-color: #839bea91;
 }
 
 .conclusion p {
