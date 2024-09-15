@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Pagina Principal</title>
-    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="recursos/css/layout.css">
 </head>
 
 <body>
     <center>
         <div class="contenedor">
             <h1 id="titulo_principal">Introduccion a Django</h1>
-            <p>Django es un software que puede utilizar para desarrollar aplicaciones web de forma rápida y eficiente.
+            <p id="texto1">Django es un software que puede utilizar para desarrollar aplicaciones web de forma rápida y
+                eficiente.
                 La
                 mayoría de las aplicaciones web tienen varias funciones comunes, como la autenticación, la recuperación
                 de
@@ -34,7 +35,7 @@
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <img src="img/djangogifmejor.gif" alt="logo django" width="350rem" height="300rem">
+            <img src="recursos/img/djangogifmejor.gif" alt="logo django" width="350rem" height="300rem">
             <br>
             <h2 id="titulos">Tabla de contenidos externos</h2>
             <table border="1">
@@ -55,39 +56,47 @@
             </table>
             <br>
             <h2 id="titulos">Ventajas y desventajas</h2>
-            <p id="Ventajas">Ventajas</p>
-            <ul>
-                <li>Desarrollo rápido: Django sigue el principio de "no te repitas", lo que permite crear aplicaciones
-                    rápidamente con menos código repetitivo.</li>
-                <li>Escalabilidad: Es adecuado tanto para proyectos pequeños como para aplicaciones grandes, lo que
-                    facilita
-                    el
-                    crecimiento del proyecto.</li>
-                <li>Seguridad: Incluye protecciones contra amenazas comunes como inyección SQL, CSRF, y XSS, reduciendo
-                    la
-                    necesidad de gestionarlas manualmente.</li>
-                <li>Comunidad y documentación: Posee una comunidad activa y una extensa documentación que facilita el
-                    aprendizaje y la resolución de problemas.</li>
-            </ul>
-            <p class="Desventajas">Desventajas</p>
-            <ul>
-                <li>Curva de aprendizaje: Para principiantes, su estructura puede ser compleja, especialmente para
-                    proyectos
-                    pequeños.</li>
-                <li>Rigidez: Sigue una estructura de proyecto muy definida, lo que puede limitar la flexibilidad para
-                    quienes
-                    prefieren una arquitectura más personalizada.</li>
-                <li>Recursos intensivos: Puede ser pesado para aplicaciones pequeñas que no requieren toda la
-                    funcionalidad
-                    que
-                    ofrece.</li>
-                <li>Monolitismo: Al ser un framework monolítico, algunos desarrolladores prefieren soluciones más
-                    ligeras o
-                    modulares para proyectos sencillos.</li>
-            </ul>
-            <br>
+            <h6 id="Ventajas">Ventajas</p>
+                <ul>
+                    <li>Desarrollo rápido: Django sigue el principio de "no te repitas", lo que permite crear
+                        aplicaciones
+                        rápidamente con menos código repetitivo.</li>
+                    <li>Escalabilidad: Es adecuado tanto para proyectos pequeños como para aplicaciones grandes, lo que
+                        facilita
+                        el
+                        crecimiento del proyecto.</li>
+                    <li>Seguridad: Incluye protecciones contra amenazas comunes como inyección SQL, CSRF, y XSS,
+                        reduciendo
+                        la
+                        necesidad de gestionarlas manualmente.</li>
+                    <li>Comunidad y documentación: Posee una comunidad activa y una extensa documentación que facilita
+                        el
+                        aprendizaje y la resolución de problemas.</li>
+                </ul>
+                <h6 class="Desventajas">Desventajas</p>
+                    <ul>
+                        <li>Curva de aprendizaje: Para principiantes, su estructura puede ser compleja, especialmente
+                            para
+                            proyectos
+                            pequeños.</li>
+                        <li>Rigidez: Sigue una estructura de proyecto muy definida, lo que puede limitar la flexibilidad
+                            para
+                            quienes
+                            prefieren una arquitectura más personalizada.</li>
+                        <li>Recursos intensivos: Puede ser pesado para aplicaciones pequeñas que no requieren toda la
+                            funcionalidad
+                            que
+                            ofrece.</li>
+                        <li>Monolitismo: Al ser un framework monolítico, algunos desarrolladores prefieren soluciones
+                            más
+                            ligeras o
+                            modulares para proyectos sencillos.</li>
+                    </ul>
+                    <br>
+        </div>
+        <div class="contenedor2">
             <h2 id="titulos">Redireccionamiento</h2>
-            <ul>
+            <ul id="listalinks">
                 <li><a href="#">Página de <span class="mayus">crud</span> en Django</a></li>
                 <li><a href="#">Página de Contacto</a></li>
                 <li><a href="#">Página de Recursos</a></li>
