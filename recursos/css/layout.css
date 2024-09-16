@@ -40,12 +40,6 @@ a:hover {
     color: hsl(107, 26%, 47%);
 }
 
-a {
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
 #Ventajas {
     color: rgb(0, 106, 57);
 }
@@ -71,6 +65,18 @@ ul {
     text-align: justify;
 }
 
-#listalinks {
+#listalinks li{
     text-align: center;
+    margin-bottom: 25px;
+}
+
+.btn {
+    
+    background-color: #2b2b2b; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 18px; 
+    border-radius: 25px; 
+    font-family: 'Nunito Sans', 'Sans-serif';
 }
