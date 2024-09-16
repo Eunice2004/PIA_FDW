@@ -1,3 +1,24 @@
+
+.btn {
+    background-color: #2b2b2b; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 18px; 
+    border-radius: 25px; 
+    margin: 10px 0; /
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent; 
+}
+
+body {
+    background-color: rgb(120, 140, 204); /* Fondo de la página */
+}
+
+
 #titulo_principal {
     font-family: 'Nunito Sans', 'Sans-serif';
     color: rgb(74, 97, 136);
@@ -70,13 +91,4 @@ ul {
     margin-bottom: 25px;
 }
 
-.btn {
-    
-    background-color: #2b2b2b; 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 18px; 
-    border-radius: 25px; 
-    font-family: 'Nunito Sans', 'Sans-serif';;
-}
+
