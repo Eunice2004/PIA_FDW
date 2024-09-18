@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="recursos/css/contacto.css">
+    <link rel="icon" href="recursos/img/iconoContacto.png" type="image/x-icon">
+</head>
+<body>
+    <a href="index.html"> <button class="btnInicio" >Inicio</button> </a>
+    <h1>Formulario de contacto</h1>
+    <form id="formularioContacto">
+        <!-- Nombre y apellidos -->
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" placeholder="Ejemplo: Aitor" required><br><br>
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" id="apellidos" placeholder="Ejemplo: Pérez" required><br><br>
+        <!-- Fin nombre y apellidos -->
+        <!-- Datos personales -->
+        <label for="correoElectronico">Correo electrónico: </label>
+        <input type="email" id="correoElectronico" placeholder="Ejemplo: Apcz@gmail.com" required><br><br>
+        <label for="telefono">Teléfono móvil: </label>
+        <input type="tel" id="telefono" placeholder="Ejemplo: 8138859823" pattern="[0-9]{10}" required><br><br>
+        <label>Género: </label>
+        <div class="contenedor-genero">
+            <div class="genero-opcion">
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+            </div>
+            <div class="genero-opcion">
+                <input type="radio" id="femenino" name="genero" value="femenino" required>
+                <label for="femenino">Femenino</label>
+            </div>
+            <div class="genero-opcion">
+                <input type="radio" id="otro" name="genero" value="otro" required>
+                <label for="otro">Otro</label>
+            </div>
+        </div>
+        <!-- Fin datos personales -->
+        <!-- Mensaje -->
+        <label for="tipoMensaje">Tipo de mensaje: </label>
+        <select name="tipoMensaje" id="tipoMensaje" required>
+            <option value="queja">Queja</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="felicitacion">Felicitación</option>
+        </select><br><br>
+        <label for="mensaje">Cuerpo del mensaje: </label><br>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="60" required></textarea><br>
+        <!-- Fin mensaje -->
+        <!-- Aviso y envío -->
+        <p>Aviso de Confidencialidad: El contenido de este mensaje es confidencial y puede contener información privada, se entiende dirigido y para uso exclusivo del destinatario, está prohibida su difusión, transmisión, alteración, explotación, impresión o copia, nuestra práctica de privacidad es coherente con la Ley Federal de Protección de Datos Personales en Posesión de Particulares, ponemos a su disposición el Aviso de Privacidad y su Política que se encuentra en nuestra <a href="#">política de privacidad</a>.</p>
+        <input type="checkbox" id="aceptar" name="aceptar" required>
+        <label for="aceptar">He leído y acepto la política de privacidad</label><br><br>
+        <button id="btn" type="submit">Enviar</button>
+        <!-- Fin aviso y envío -->   
+    </form>
+
+    <p id="mensajeConfirmacion" class="confirmacion"></p>
+
+    <!-- Validaciones -->
+    <script>
+        // Formulario y mensaje de confirmacion
+        const formulario = document.getElementById('formularioContacto');
+        const mensajeConfirmacion = document.getElementById('mensajeConfirmacion');
+        
+        // Función que envía el formulario
+        formulario.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Nombre
+            const nombre = document.getElementById('nombre').value;
+
+            // Validacion del formulario
+            if (validarFormulario()) {
+                mensajeConfirmacion.textContent = `El mensaje se ha enviado, gracias ${nombre}`;
+            }});
+
+        // Función para validar el formulario
+        function validarFormulario() {
+
+            // Validar nombre
+            const nombre = document.getElementById('nombre').value;
+            if (nombre.trim() === '') {
+                alert('Por favor, ingresa tu nombre');
+                return false;   }
+
+            // Validar apellidos
+            const apellidos = document.getElementById('apellidos').value;
+            if (apellidos.trim() === '') {
+                alert('Por favor, ingresa tus apellidos');
+                return false;   }
+
+            // Validar correo electrónico
+            const correoElectronico = document.getElementById('correoElectronico').value;
+            if (correoElectronico.trim() === '') {
+                alert('Por favor, ingresa tu correo electrónico');
+                return false;   }
+
+            // Validar teléfono
+            const telefono = document.getElementById('telefono').value;
+            const telefonoPattern = /^[0-9]{10}$/;
+            if (!telefonoPattern.test(telefono)) {
+                alert('Ingresa un teléfono móvil de 10 dígitos');
+                return false;   }
+
+            // Validar selección de género
+            const generoSeleccionado = document.querySelector('input[name="genero"]:checked');
+            if (!generoSeleccionado) {
+                alert('Selecciona tu género');
+                return false;   }
+
+            // Validar mensaje
+            const mensaje = document.getElementById('mensaje').value;
+            if (mensaje.trim() === '') {
+                alert('Ingresa el cuerpo del mensaje');
+                return false;   }
+
+            // Validar aceptación de política de privacidad
+            const aceptar = document.getElementById('aceptar').checked;
+            if (!aceptar) {
+                alert('Acepta la política de privacidad');
+                return false;   }
+            return true;        }
+    </script>
+    <!-- Fin validaciones -->
+</body>
+</html>
