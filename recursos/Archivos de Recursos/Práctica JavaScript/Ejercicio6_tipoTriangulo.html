@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 6</title>
+    </head>
+    <body>
+
+        <!-- Formulario -->
+         <input id="lado1" type="number" placeholder="Lado 1">
+         <input id="lado2" type="number" placeholder="Lado 2">
+         <input id="lado3" type="number" placeholder="Lado 3">
+         <button onclick="evaluaTipoTriangulo()">Determinar Tipo Triángulo</button>
+         <p id="resultado"></p>
+        <!-- Fin Formulario -->
+
+        <!-- Función JS -->
+         <script>
+            function evaluaTipoTriangulo() {
+                var lado1 = parseFloat(document.getElementById('lado1').value);
+                var lado2 = parseFloat(document.getElementById('lado2').value);
+                var lado3 = parseFloat(document.getElementById('lado3').value);
+                var resultado;
+
+                if (lado1 === lado2 && lado2 === lado3) {
+                    resultado = 'Equilátero';
+                } else if (lado1 === lado2 || lado2 === lado3 || lado1 === lado3) {
+                    resultado = 'Isóceles';
+                } else {
+                    resultado = 'Escaleno';
+                }
+
+                document.getElementById('resultado').textContent = 'El tipo de triángulo es: ' + resultado;
+            }
+         </script>
+        <!-- Fin Función JS -->
+
+    </body>
+</html>
